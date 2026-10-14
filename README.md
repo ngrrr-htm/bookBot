@@ -29,6 +29,7 @@ Buyers submit payment receipts through Telegram, and administrators can approve 
 
 ## Project Structure
 
+```text
 bookBOT/
 ├── bot_sql.php          # Main Telegram webhook and bot logic
 ├── get_file_id.php      # Temporary helper for retrieving Telegram file IDs
@@ -39,6 +40,7 @@ bookBOT/
 ├── .htaccess            # Web-server access restrictions, if provided
 └── README.md
 
+```
 
 `config.php`, `config.example.php`, and `.htaccess` are deployment/configuration files; include the example and `.htaccess` in the repository only if you have created and reviewed them.
 
@@ -55,6 +57,7 @@ The database contains four tables:
 
 ### Order lifecycle
 
+```text
 Buyer selects a book
         |
         v
@@ -81,6 +84,7 @@ immediately instructions
          |              |
     Send book      Notify buyer
     to buyer       of rejection
+```
 
 Order statuses are `pending`, `approved`, and `rejected`.
 
